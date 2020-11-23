@@ -266,7 +266,24 @@
                     "attachmentType": "text/plain"
                 }
             }
+        ],
+        "wasm": [
+            {
+                "kind": "wasm:0.1",
+                "default": true,
+                "image": {
+                    "prefix": "openwhisk",
+                    "name": "wasm1action",
+                    "tag": "nightly"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "codefile",
+                    "attachmentType": "application/wasm"
+                }
+            }
         ]
+
     },
     "blackboxes": [
         {

@@ -318,7 +318,7 @@ imagePullSecrets:
 {{- if eq .Values.invoker.containerFactory.impl "docker" -}}
 -Dwhisk.spi.ContainerFactoryProvider=org.apache.openwhisk.core.containerpool.docker.DockerContainerFactoryProvider
 {{- else -}}
--Dkubernetes.master=https://$KUBERNETES_SERVICE_HOST -Dwhisk.spi.ContainerFactoryProvider=org.apache.openwhisk.core.containerpool.kubernetes.KubernetesContainerFactoryProvider
+-Dkubernetes.master=https://$KUBERNETES_SERVICE_HOST -Dwhisk.spi.ContainerFactoryProvider=org.apache.openwhisk.core.containerpool.wasm.WasmContainerFactoryProvider
 {{- end -}}
 {{- end -}}
 
