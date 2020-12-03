@@ -4,6 +4,14 @@ whisk:
     apiHostName: 0.0.0.0 # Overriden by script
     apiHostPort: 31001
 
+ow-utils:
+  imageName: "whisk/ow-utils"
+  imageTag: "latest"
+
+controller:
+  imageName: "whisk/controller"
+  imageTag: "latest"
+
 invoker:
   imageName: "whisk/invoker"
   imageTag: "latest"

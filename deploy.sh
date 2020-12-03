@@ -18,6 +18,7 @@ kubectl label node kind-worker2 openwhisk-role=invoker
 # These images are built locally
 kind load docker-image --nodes kind-worker,kind-worker2 whisk/invoker:latest
 kind load docker-image --nodes kind-worker,kind-worker2 whisk/controller:latest
+kind load docker-image --nodes kind-worker,kind-worker2 whisk/ow-utils
 
 # These images are pulled from a registry
 kind load docker-image --nodes kind-worker,kind-worker2 openwhisk/apigateway
@@ -25,7 +26,6 @@ kind load docker-image --nodes kind-worker,kind-worker2 apache/couchdb
 # kind load docker-image --nodes kind-worker,kind-worker2 openwhisk/controller
 # kind load docker-image --nodes kind-worker,kind-worker2 openwhisk/invoker
 kind load docker-image --nodes kind-worker,kind-worker2 wurstmeister/kafka
-kind load docker-image --nodes kind-worker,kind-worker2 openwhisk/ow-utils
 kind load docker-image --nodes kind-worker,kind-worker2 zookeeper
 kind load docker-image --nodes kind-worker,kind-worker2 nginx
 kind load docker-image --nodes kind-worker,kind-worker2 redis
