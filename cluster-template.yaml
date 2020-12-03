@@ -1,0 +1,14 @@
+whisk:
+  ingress:
+    type: NodePort
+    apiHostName: 0.0.0.0 # Overriden by script
+    apiHostPort: 31001
+
+invoker:
+  imageName: "whisk/invoker"
+  imageTag: "latest"
+  containerFactory:
+    impl: "kubernetes"
+
+nginx:
+  httpsNodePort: 31001
